@@ -20,29 +20,29 @@ UT EID 2:
 # Iterates over a 2D list from left to right, then top to bottom
 # and returning the coordinates (row, column).
 def row_major_traversal(grid):
+    _row_major_traversal = []
     row = 0
-    loc = []
     while row < len(grid):
         col = 0
         while col < len(grid[row]):
-            loc.append((row, col))
+            _row_major_traversal.append((row, col))
             col += 1
         row += 1
-    return loc
+    return _row_major_traversal
 
 
 # Iterates over a 2D list from left to right, then top to bottom
 # and returning the coordinates (row, column).
 def column_major_traversal(grid):
+    _column_major_traversal = []
     col = 0
-    loc = []
     while col < len(grid[0]):
         row = 0
         while row < len(grid):
-            loc.append((row, col))
+            _column_major_traversal.append((row, col))
             row += 1
         col += 1
-    return loc
+    return _column_major_traversal
 
 
 # Iterates over a 2D list from top to bottom then left to right
@@ -145,7 +145,7 @@ def spiral_traversal(grid):
         row += 1
         while row < len(grid) - round and len(loc) < len(grid) * len(grid[0]):
             loc.append((row, col))
-            row += 1 
+            row += 1
         row -= 1
         col -= 1
         while col > 0 + round and len(loc) < len(grid) * len(grid[0]):
