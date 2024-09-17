@@ -137,9 +137,7 @@ def spiral_traversal(grid):
     col = 0
     round = 0
     loc = []
-    print(len(grid) * len(grid[0]))
     while row < len(grid) - round:
-        print(row, col, round, len(grid[0])-round)
         while col < len(grid[0]) - round and len(loc) < len(grid) * len(grid[0]):
             loc.append((row, col))
             col += 1
