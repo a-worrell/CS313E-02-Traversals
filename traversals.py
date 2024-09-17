@@ -20,7 +20,8 @@ UT EID 2:
 # Iterates over a 2D list from left to right, then top to bottom
 # and returning the coordinates (row, column).
 def row_major_traversal(grid):
-    """Iterates over a 2D list from left to right, then top to bottom and returning the coordinates (row, column)."""
+    """Iterates over a 2D list from left to right, then top to bottom
+    and returning the coordinates (row, column)."""
     loc = []
     row = 0
     while row < len(grid):
@@ -35,7 +36,8 @@ def row_major_traversal(grid):
 # Iterates over a 2D list from left to right, then top to bottom
 # and returning the coordinates (row, column).
 def column_major_traversal(grid):
-    """Iterates over a 2D list from left to right, then top to bottom and returning the coordinates (row, column)."""
+    """Iterates over a 2D list from left to right, then top to bottom
+    and returning the coordinates (row, column)."""
     loc = []
     col = 0
     while col < len(grid[0]):
@@ -50,7 +52,8 @@ def column_major_traversal(grid):
 # Iterates over a 2D list from top to bottom then left to right
 # and returning the coordinates (row, column).
 def row_zigzag_traversal(grid):
-    """Iterates over a 2D list from top to bottom then left to right and returning the coordinates (row, column)."""
+    """Iterates over a 2D list from top to bottom then left to right
+    and returning the coordinates (row, column)."""
     row = 0
     loc = []
     while row < len(grid):
@@ -72,7 +75,9 @@ def row_zigzag_traversal(grid):
 # left to right and right to left, going from top to bottom
 # and returning the coordinates (row, column).
 def column_zigzag_traversal(grid):
-    """ Iterates over a 2D list by alternating between iterating left to right and right to left, going from top to bottom and returning the coordinates (row, column)."""
+    """ Iterates over a 2D list by alternating between iterating
+    left to right and right to left, going from top to bottom
+    and returning the coordinates (row, column)."""
     col = 0
     loc = []
     while col < len(grid[0]):
@@ -94,7 +99,9 @@ def column_zigzag_traversal(grid):
 # in the direction of the main diagonal and returning the
 # coordinates (row, column).
 def main_diagonal_traversal(grid):
-    """Iterates over a 2D list from the top-right to the bottom-left in the direction of the main diagonal and returning the coordinates (row, column)."""
+    """Iterates over a 2D list from the top-right to the bottom-left
+    in the direction of the main diagonal and returning the
+    coordinates (row, column)."""
     col = len(grid[0]) - 1
     row = 0
     loc = []
@@ -117,7 +124,9 @@ def main_diagonal_traversal(grid):
 # in the direction of the secondary diagonal and returning the
 # coordinates (row, column).
 def secondary_diagonal_traversal(grid):
-    """Iterates over a 2D list from the top-left to the bottom-right in the direction of the secondary diagonal and returning the coordinates (row, column)."""
+    """Iterates over a 2D list from the top-left to the bottom-right
+    in the direction of the secondary diagonal and returning the
+    coordinates (row, column)."""
     col = 0
     row = 0
     loc = []
@@ -139,7 +148,8 @@ def secondary_diagonal_traversal(grid):
 # Iterates over a 2D list in spiral order and returning the
 # coordinates (row, column).
 def spiral_traversal(grid):
-    """Iterates over a 2D list in spiral order and returning the coordinates (row, column)."""
+    """Iterates over a 2D list in spiral order and returning the
+    coordinates (row, column)."""
     row = 0
     col = 0
     run_num = 0
