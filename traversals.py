@@ -94,17 +94,17 @@ def main_diagonal_traversal(grid):
     row = 0
     loc = []
     while row < len(grid):
-        sRow = row
+        s_row = row
         while col >= 0:
-            sCol = col
-            row = sRow
+            s_col = col
+            row = s_row
             while col < len(grid[0]) and row < len(grid):
                 loc.append((row, col))
                 row += 1
                 col += 1
-            col = sCol - 1
+            col = s_col - 1
         col = 0
-        row = sRow + 1
+        row = s_row + 1
     return loc
 
 
@@ -116,17 +116,17 @@ def secondary_diagonal_traversal(grid):
     row = 0
     loc = []
     while row < len(grid):
-        sRow = row
+        s_row = row
         while col < len(grid[0]):
-            sCol = col
-            row = sRow
+            s_col = col
+            row = s_row
             while col >= 0 and row < len(grid):
                 loc.append((row, col))
                 row += 1
                 col -= 1
-            col = sCol + 1
+            col = s_col + 1
         col = len(grid[0]) - 1
-        row = sRow + 1
+        row = s_row + 1
     return loc
 
 
@@ -160,76 +160,3 @@ def spiral_traversal(grid):
         col += 1
         round += 1
     return loc
-    
-
-
-grid_3x5 = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]]
-##print("C", column_major_traversal(grid_3x5))
-#print("RZ", row_zigzag_traversal(grid_3x5))
-#print("CZ", column_zigzag_traversal(grid_3x5))
-#print("MD", main_diagonal_traversal(grid_3x5))
-#print("SD", secondary_diagonal_traversal(grid_3x5))
-#print("ST", spiral_traversal(grid_3x5))
-
-
-grid_8x6 = [
-            [1, 2, 3, 4, 5, 6],
-            [7, 8, 9, 10, 11, 12],
-            [13, 14, 15, 16, 17, 18],
-            [19, 20, 21, 22, 23, 24],
-            [25, 26, 27, 28, 29, 30],
-            [31, 32, 33, 34, 35, 36],
-            [37, 38, 39, 40, 41, 42],
-            [43, 44, 45, 46, 47, 48],
-        ]
-print(spiral_traversal(grid_8x6))
-expected = [
-            (0, 0),
-            (0, 1),
-            (0, 2),
-            (0, 3),
-            (0, 4),
-            (0, 5),
-            (1, 5),
-            (2, 5),
-            (3, 5),
-            (4, 5),
-            (5, 5),
-            (6, 5),
-            (7, 5),
-            (7, 4),
-            (7, 3),
-            (7, 2),
-            (7, 1),
-            (7, 0),
-            (6, 0),
-            (5, 0),
-            (4, 0),
-            (3, 0),
-            (2, 0),
-            (1, 0),
-            (1, 1),
-            (1, 2),
-            (1, 3),
-            (1, 4),
-            (2, 4),
-            (3, 4),
-            (4, 4),
-            (5, 4),
-            (6, 4),
-            (6, 3),
-            (6, 2),
-            (6, 1),
-            (5, 1),
-            (4, 1),
-            (3, 1),
-            (2, 1),
-            (2, 2),
-            (2, 3),
-            (3, 3),
-            (4, 3),
-            (5, 3),
-            (5, 2),
-            (4, 2),
-            (3, 2),
-        ]
